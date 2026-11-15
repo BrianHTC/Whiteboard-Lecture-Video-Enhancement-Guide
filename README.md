@@ -1,6 +1,7 @@
-# 1080p Interlaced Lecture Video & Whiteboard Enhancement Pipeline
+# 1080p Interlaced Lecture Video & Whiteboard Enhancement Guide
 
 A local, GPU-accelerated batch workflow for converting interlaced `.MTS` lecture recordings into high-contrast, sharp MP4 videos with clear whiteboard handwriting and normalized voice audio.
+Works for any other file-type supported by ffmpeg.
 
 ---
 
@@ -8,9 +9,9 @@ A local, GPU-accelerated batch workflow for converting interlaced `.MTS` lecture
 
 * **FFmpeg** — Used for deinterlacing, contrast/whiteboard curve adjustment, unsharp masking, and audio filtering/normalization (`ffmpeg.org`).
 * **Video2X (v6.4.0 CLI / Qt6)** — Used for NCNN-Vulkan GPU inference and hardware-accelerated NVENC encoding (`github.com/k4yt3x/video2x`).
-* **chaiNNer** — Used to convert PyTorch `.pth` super-resolution models into `fp16` NCNN `.param` and `.bin` binaries (`github.com/chaiNNer-org/chaiNNer`).
-* **AI Restoration Model (`2x-DigitalFlim-SuperUltraCompact`)** — Lightweight `SRVGGNetCompact` deblur/restoration architecture sourced from OpenModelDB (`https://openmodeldb.info/models/2x-DigitalFlim-SuperUltraCompact`).
-
+* **AI Restoration Model (`2x-DigitalFlim-SuperUltraCompact`)** — Lightweight `SRVGGNetCompact` deblur/restoration architecture sourced from OpenModelDB (`https://openmodeldb.info/models/2x-DigitalFlim-SuperUltraCompact`), or any other similar model. Demo is already provided: [realesr-animevideov3-x2.bin](https://github.com/BrianHTC/Whiteboard-Lecture-Video-Enhancement-Guide/blob/main/realesr-animevideov3-x2.bin) [realesr-animevideov3-x2.param](https://github.com/BrianHTC/Whiteboard-Lecture-Video-Enhancement-Guide/blob/main/realesr-animevideov3-x2.param). 
+---------
+* **chaiNNer** — Used to convert PyTorch `.pth` super-resolution models into `fp16` NCNN `.param` and `.bin` binaries (`github.com/chaiNNer-org/chaiNNer`). ONLY NEEDED FOR CUSTOM BUILDS
 ---
 
 ## 2. System & Software Prerequisites
@@ -21,7 +22,7 @@ A local, GPU-accelerated batch workflow for converting interlaced `.MTS` lecture
 ### Software Setup
 1. **FFmpeg:** Installed and added to your Windows System `PATH` so `ffmpeg` can be invoked from any PowerShell terminal.
 2. **Video2X 6.4.0:** Installed (e.g., `C:\Program Files\Video2X Qt6\video2x.exe`).
-3. **chaiNNer (with ONNX & NCNN dependencies):** Required only once to convert `.pth` weights to NCNN format.
+3. **chaiNNer (with ONNX & NCNN dependencies):** Required only once to convert `.pth` weights to NCNN format. (Unnecessary)
 
 ---
 
