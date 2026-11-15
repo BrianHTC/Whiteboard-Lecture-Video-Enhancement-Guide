@@ -1,7 +1,8 @@
-# 1080p Interlaced Lecture Video & Whiteboard Enhancement Guide
+# 1080p Lecture Video Enhancement Guide
 
-A local, GPU-accelerated batch workflow for converting interlaced `.MTS` lecture recordings into high-contrast, sharp MP4 videos with clear whiteboard handwriting and normalized voice audio.
-Works for any other file-type supported by ffmpeg.
+A local, GPU-accelerated batch workflow for converting poorly recorded `.MTS` lecture recordings into high-contrast, sharp MP4 videos with clear whiteboard handwriting and normalized voice audio.
+This concept works for any other file-type supported by ffmpeg.
+Key actions: Human-voice boost, noise suppression, and whiteboard writing enhancement. 
 
 ---
 
