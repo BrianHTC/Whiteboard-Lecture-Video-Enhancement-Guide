@@ -34,7 +34,7 @@ Video2X 6.4.0 enforces a strict model-name whitelist in its CLI and GUI (`valida
 1. **Convert to NCNN (`fp16`):**
    * Open **chaiNNer** (ensure the **ONNX** dependency is installed via the top-right Dependency Manager).
    * Connect **Load Model** (`2x-DigitalFlim-SuperUltraCompact.pth`) → **Convert To NCNN** (set **Data Type** to `fp16`) → **Save Model**.
-   * [Demo](https://github.com/BrianHTC/Whiteboard-Lecture-Video-Enhancement-Guide/blob/main/Chainner%20%20workflow.png)
+   * ![Demo](https://github.com/BrianHTC/Whiteboard-Lecture-Video-Enhancement-Guide/blob/main/Chainner%20%20workflow.png)
 2. **Verify I/O Layer Names:**
    * Open the generated `.param` file in Notepad. Confirm the input blob is named `data` and the final output blob is named `output`.
 3. **Install into Video2X:**
