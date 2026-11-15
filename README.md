@@ -12,7 +12,7 @@ Key actions: Human-voice boost, noise suppression, and whiteboard writing enhanc
 * **Video2X (v6.4.0 CLI / Qt6)** — Used for NCNN-Vulkan GPU inference and hardware-accelerated NVENC encoding (`github.com/k4yt3x/video2x`).
 * **AI Restoration Model (`2x-DigitalFlim-SuperUltraCompact`)** — Lightweight `SRVGGNetCompact` deblur/restoration architecture sourced from OpenModelDB (`https://openmodeldb.info/models/2x-DigitalFlim-SuperUltraCompact`).
 ---------
-* **chaiNNer** — Used to convert PyTorch `.pth` super-resolution models into `fp16` NCNN `.param` and `.bin` binaries (`github.com/chaiNNer-org/chaiNNer`). ONLY NEEDED FOR CUSTOM BUILDS
+* **chaiNNer** — Used to convert PyTorch `.pth` super-resolution models into `fp16` NCNN `.param` and `.bin` binaries (`github.com/chaiNNer-org/chaiNNer`). Needs the Pytorch, NCNN, and ONNX dependencies.  ONLY NEEDED FOR CUSTOM BUILDS
 ---
 
 ## 2. System & Software Prerequisites
@@ -34,6 +34,7 @@ Video2X 6.4.0 enforces a strict model-name whitelist in its CLI and GUI (`valida
 1. **Convert to NCNN (`fp16`):**
    * Open **chaiNNer** (ensure the **ONNX** dependency is installed via the top-right Dependency Manager).
    * Connect **Load Model** (`2x-DigitalFlim-SuperUltraCompact.pth`) → **Convert To NCNN** (set **Data Type** to `fp16`) → **Save Model**.
+   * [Demo](https://github.com/BrianHTC/Whiteboard-Lecture-Video-Enhancement-Guide/blob/main/Chainner%20%20workflow.png)
 2. **Verify I/O Layer Names:**
    * Open the generated `.param` file in Notepad. Confirm the input blob is named `data` and the final output blob is named `output`.
 3. **Install into Video2X:**
