@@ -91,6 +91,7 @@ Because `2x-DigitalFlim-SuperUltraCompact` is a `2x` model, running it with `-s 
 
 ### 5-Second Verification Test (Optional)
 Before running a multi-hour batch, slice a 5-second clip to verify speed, resolution, and visual alignment:
+This guide uses a 2-thread process since one left some room on the 3060ti. 
 ```powershell
 ffmpeg -y -i "課程-1_ready.mp4" -t 5 -c copy "test_5s.mp4"
 
